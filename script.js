@@ -44,12 +44,17 @@ const galleries = {
     "images/portfolio/5283112492421218173.jpg",
     "images/portfolio/work4-5.jpg"
   ],
-  shoot5: [
-    "images/portfolio/work5-1.jpg",
-    "images/portfolio/work5-2.jpg",
-    "images/portfolio/work5-3.jpg",
-    "images/portfolio/work5-4.jpg",
-    "images/portfolio/work5-5.jpg"
+shoot5: [
+    "images/portfolio/5429396510136276365.jpg",
+    "images/portfolio/5429396510136276366.jpg",
+    "images/portfolio/5429396510136276367.jpg",
+    "images/portfolio/5429396510136276368.jpg",
+    "images/portfolio/5429396510136276369.jpg",
+    "images/portfolio/5429396510136276370.jpg",
+    "images/portfolio/5429396510136276371.jpg",
+    "images/portfolio/5429396510136276372.jpg",
+    "images/portfolio/5429396510136276373.jpg",
+    "images/portfolio/5429396510136276374.jpg"
   ]
 };
 
