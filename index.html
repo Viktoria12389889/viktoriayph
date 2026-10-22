@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Виктория — Фотограф | Прокопьевск</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="logo">Виктория</div>
+    <nav>
+      <a href="index.html">Портфолио</a>
+      <a href="retouch.html">Ретушь</a>
+    </nav>
+    <div class="location">Прокопьевск</div>
+  </header>
+
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+  <section class="hero">
+    <img src="images/portfolio/JSljdZyAqvsAqzvys6tWuuWDr3ul_skJVT0HV_SLlSZ7f2JgORFNRATvqU2dbzL4Jx3k9AODsPqstj3HthgcZgQJ.jpg" alt="Фоновое фото" class="hero-bg-image">
+
+    <div class="hero-title"></div>
+
+    <div class="hero-text-left">
+      <h1>Искусство<br>в каждом<br>кадре</h1>
+      <p>Создаю атмосферные и живые фотографии.</p>
+      <a href="#gallery" class="btn">Смотреть работы</a>
+    </div>
+
+    <div class="hero-text-right">
+      <p>Новая<br>коллекция<br>2024</p>
+    </div>
+  </section>
+
+  <!-- БЛОК УСЛУГ -->
+  <section class="services">
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Портрет</h3>
+        <p>Естественность и свет.</p>
+        <a href="#gallery" class="service-link">Смотреть →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Ретушь</h3>
+        <p>Идеальная обработка.</p>
+        <a href="retouch.html" class="service-link">Перейти →</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-text">
+        <h3>Отзывы</h3>
+        <p>Что говорят клиенты.</p>
+        <a href="#reviews" class="service-link">Читать →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОРТФОЛИО -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-title">
+      <h2>Портфолио</h2>
+      <span>Нажмите на фото, чтобы открыть серию</span>
+    </div>
+
+    <!-- Сетка будет собираться автоматически из script.js -->
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+  <!-- ЛЕНТА ОТЗЫВОВ -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-title">
+      <h2>Отзывы</h2>
+      <span>Листайте вправо →</span>
+    </div>
+
+    <div class="reviews-scroll-container">
+      <button class="scroll-btn scroll-left" onclick="scrollReviews(-1)">❮</button>
+
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-item" onclick="openLightboxForReview('images/portfolio/review1.jpg')">
+          <img src="images/portfolio/review1.jpg" alt="Отзыв 1">
+        </div>
+        <div class="review-item" onclick="openLightboxForReview('images/portfolio/review2.jpg')">
+          <img src="images/portfolio/review2.jpg" alt="Отзыв 2">
+        </div>
+        <div class="review-item" onclick="openLightboxForReview('images/portfolio/review3.jpg')">
+          <img src="images/portfolio/review3.jpg" alt="Отзыв 3">
+        </div>
+        <div class="review-item" onclick="openLightboxForReview('images/portfolio/review4.jpg')">
+          <img src="images/portfolio/review4.jpg" alt="Отзыв 4">
+        </div>
+      </div>
+
+      <button class="scroll-btn scroll-right" onclick="scrollReviews(1)">❯</button>
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer>
+    <div>© 2026 Виктория</div>
+    <div>Прокопьевск, Россия</div>
+    <div>Связаться: @your_tg</div>
+  </footer>
+
+  <!-- ЛАЙТБОКС -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+    <button class="lightbox-prev" onclick="changeImage(-1)">❮</button>
+    <img src="" alt="Просмотр" class="lightbox-img" id="lightbox-img">
+    <button class="lightbox-next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

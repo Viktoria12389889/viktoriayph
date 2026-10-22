@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Виктория — Ретушь | Прокопьевск</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Виктория</div>
+    <nav>
+      <a href="index.html">Портфолио</a>
+      <a href="retouch.html">Ретушь</a>
+    </nav>
+    <div class="location">Прокопьевск</div>
+  </header>
+
+  <section class="retouch-intro">
+    <h1>Ретушь</h1>
+    <p>Профессиональная обработка фотографий. Сохраняю естественность текстуры кожи, работаю с цветом и светом. Ниже — примеры моих работ до и после.</p>
+  </section>
+
+  <section class="gallery-section" style="padding-top: 0;">
+    
+    <!-- Сюда будут выгружаться новые фото, добавленные через админку -->
+    <div class="retouch-grid" id="dynamicRetouchGrid"></div>
+
+    <!-- Ваши старые (базовые) примеры остаются ниже, если они нужны. 
+         Если хотите их убрать и оставить только загруженные, просто удалите блок ниже -->
+    <div class="retouch-grid" style="margin-top: 40px;">
+      
+      <!-- ПРИМЕР 1 (ваш старый код для примера, можете оставить или удалить) -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/[SW.BAND]%20281113805.jpg" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/1.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 2 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/[SW.BAND]%20DSC_8144.jpg" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/2.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 3 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/0J3A9473.jpg" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/3.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 4 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/4.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/4.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 5 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/5.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/5.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 6 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/6.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/6.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 7 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/7.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/7.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 8 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/8.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/8.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 9 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/0050-FreeToRetouchThis_-November24-METTY.jpg" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/9.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 10 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/10.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/10.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 11 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/IMG_8135.jpg" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/11.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 12 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/12.png" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/12.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ПРИМЕР 13 -->
+      <div class="retouch-card">
+        <div class="before-after">
+          <div class="ba-item">
+            <img src="images/retouch/tag%20@signatureeditsco%20-%20IMG_7426.jpg" alt="До">
+            <div class="ba-label">До</div>
+          </div>
+          <div class="ba-item">
+            <img src="images/retouch/13.jpg" alt="После">
+            <div class="ba-label" style="background: #f7f5f0; color: #332d2b;">После</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer>
+    <div>© 2026 Виктория</div>
+    <div>Прокопьевск, Россия</div>
+    <div>Связаться: @your_tg</div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+/* --- БАЗОВЫЕ НАСТРОЙКИ --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f5f0; /* Теплый кремовый фон */
+  color: #332d2b; /* Темно-коричневый текст */
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- ШАПКА --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f7f5f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e8e2d9;
+}
+
+.logo { font-size: 24px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+nav { display: flex; gap: 30px; }
+nav a { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: opacity 0.3s; }
+nav a:hover { opacity: 0.6; }
+.location { font-size: 12px; color: #8a7f7a; text-transform: uppercase; }
+
+/* --- ГЛАВНЫЙ ЭКРАН --- */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2;
+  font-size: 18vw;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #332d2b;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-text-left {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 3;
+  max-width: 300px;
+}
+.hero-text-left h1 {
+  font-size: 18px; font-weight: 400;
+  line-height: 1.2; letter-spacing: 3px;
+  text-transform: uppercase; margin-bottom: 15px;
+  color: #332d2b;
+}
+.hero-text-left p {
+  font-size: 14px; color: #5c524e;
+  margin-bottom: 20px;
+}
+
+.hero-text-right {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 3;
+  text-align: right;
+  font-size: 12px; letter-spacing: 2px;
+  text-transform: uppercase; line-height: 1.8;
+  color: #332d2b;
+}
+
+.btn {
+  display: inline-block; 
+  background-color: #332d2b;
+  color: #fff;
+  padding: 12px 24px; font-size: 12px; text-transform: uppercase;
+  letter-spacing: 1px; transition: background 0.3s;
+}
+.btn:hover { background-color: #5c524e; }
+
+/* --- БЛОК УСЛУГ --- */
+.services { 
+  background-color: #332d2b;
+  color: #f7f5f0; 
+  display: flex; justify-content: space-around; 
+  padding: 50px 40px; flex-wrap: wrap; gap: 20px; 
+}
+.service-card { display: flex; align-items: center; gap: 15px; max-width: 300px; }
+.service-card img { width: 80px; height: 100px; object-fit: cover; border-radius: 4px; }
+.service-text h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+.service-text p { font-size: 12px; color: #b8afa9; margin-bottom: 10px; }
+.service-link { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #f7f5f0; padding-bottom: 2px; }
+
+/* --- ПОРТФОЛИО --- */
+.gallery-section { padding: 80px 40px; max-width: 1400px; margin: 0 auto; }
+.section-title {
+  font-size: 32px; font-weight: 400; text-transform: uppercase;
+  letter-spacing: 2px; margin-bottom: 40px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  border-bottom: 1px solid #e8e2d9; padding-bottom: 15px;
+}
+.section-title span { font-size: 12px; color: #8a7f7a; text-transform: none; letter-spacing: 1px; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  grid-auto-rows: 250px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #e8e2d9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.gallery-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* --- СТРАНИЦА РЕТУШИ --- */
+.retouch-intro { padding: 80px 40px 40px; max-width: 1400px; margin: 0 auto; }
+.retouch-intro h1 { font-size: 48px; font-weight: 400; letter-spacing: -1px; margin-bottom: 20px; text-transform: uppercase; }
+.retouch-intro p { max-width: 600px; color: #5c524e; font-size: 16px; }
+
+/* Сетка для карточек ретуши (3 в ряд) */
+.retouch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+}
+
+.retouch-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.before-after { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 2px; 
+  background: #332d2b; 
+  border-radius: 4px; 
+  overflow: hidden; 
+}
+
+.ba-item { 
+  position: relative; 
+  background-color: #e8e2d9; /* Красивый фон, если фото горизонтальное */
+  /* Делаем высоту чуть больше, чтобы фото помещалось */
+  height: 350px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ba-item img { 
+  width: 100%; 
+  height: 100%; 
+  /* ВОТ ГЛАВНОЕ ИЗМЕНЕНИЕ: contain вместо cover */
+  object-fit: contain; 
+  display: block;
+}
+
+.ba-label { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  background: rgba(51,45,43,0.8); 
+  color: #fff; 
+  padding: 4px 8px; 
+  font-size: 10px; 
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* --- ЛЕНТА ОТЗЫВОВ --- */
+.reviews-section {
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.reviews-scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.reviews-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-item {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 400px;
+  scroll-snap-align: start;
+  cursor: pointer;
+  background: #e8e2d9;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.review-item:hover {
+  transform: translateY(-5px);
+}
+
+.review-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.scroll-btn {
+  background: #332d2b;
+  color: #f7f5f0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.scroll-btn:hover { background: #5c524e; }
+.scroll-left { left: -20px; }
+.scroll-right { right: -20px; }
+
+/* --- ЛАЙТБОКС --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(51, 45, 43, 0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  animation: fadeIn 0.3s ease;
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 40px;
+  color: #f7f5f0; font-size: 40px;
+  cursor: pointer; background: none; border: none;
+  transition: color 0.3s;
+}
+.lightbox-close:hover { color: #b8afa9; }
+
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  color: #f7f5f0; font-size: 40px;
+  cursor: pointer; background: none; border: none;
+  padding: 20px;
+}
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-prev:hover, .lightbox-next:hover { color: #b8afa9; }
+
+/* --- ПОДВАЛ --- */
+footer {
+  padding: 40px; display: flex; justify-content: space-between;
+  align-items: center; border-top: 1px solid #e8e2d9;
+  font-size: 12px; color: #8a7f7a; text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* --- СЧЕТЧИК ФОТО НА ОБЛОЖКЕ --- */
+.gallery-count {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(51, 45, 43, 0.75); /* Темный полупрозрачный фон */
+  color: #f7f5f0; /* Кремовый текст */
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px; /* Закругленные края */
+  pointer-events: none; /* Чтобы не мешал клику по фото */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px); /* Легкое размытие фона под текстом */
+}
+
+/* --- АДАПТИВ --- */
+@media (max-width: 1200px) {
+  .retouch-grid { grid-template-columns: repeat(2, 1fr); } /* На ноутбуках 2 колонки */
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .ba-item { height: 300px; }
+}
+
+@media (max-width: 768px) {
+  header { padding: 20px; flex-direction: column; gap: 15px; }
+  
+  .hero { height: 80vh; align-items: flex-end; padding-bottom: 100px; }
+  .hero-title { font-size: 22vw; position: absolute; top: 20%; }
+  .hero-text-left { bottom: 20px; left: 20px; right: 20px; max-width: 100%; text-align: center; }
+  .hero-text-right { display: none; }
+  
+  .services { flex-direction: column; align-items: center; }
+  .section-title { flex-direction: column; align-items: flex-start; gap: 10px; }
+  
+  .retouch-grid { grid-template-columns: 1fr; } /* На телефонах 1 колонка */
+  .ba-item { height: 250px; }
+  
+  footer { flex-direction: column; gap: 10px; text-align: center; }
+  .gallery-grid { grid-auto-rows: 200px; }
+  .reviews-section { padding: 40px 20px; }
+  .scroll-btn { display: none; }
+  .review-item { width: 240px; height: 340px; }
+}
